@@ -78,10 +78,9 @@
    <script>
 	function sendData(){
   	 $.ajax({
-    		url: 'https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec',
+    		url: 'https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec?time=123&sentence=HelloItsMe',
     		method: "GET",
-    		dataType: "json",
-    		data: JSON.stringify({time: Date.now(), sentence: document.getElementById("sentence").value})
+    		dataType: "json"
   		}).success(
     		   //test
   	        );
