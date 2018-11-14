@@ -87,20 +87,16 @@
 		<script>
 			function saveSentence(){
 				console.log("saving");
-				
+  				var jqxhr = $.ajax({
+    				url: "https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec",
+    					method: "GET",
+    					dataType: "json",
+    					data: $form.serializeObject()
+  				}).success(
+					//something
+  				);
 			}
 				
-		$('#submit-form').on('click', function(e) {
-  			e.preventDefault();
-  			var jqxhr = $.ajax({
-    			url: "https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec",
-    			method: "GET",
-    			dataType: "json",
-    			data: $('form#test-form').serializeObject()
-  			}).success(
-				//something
-  			);
-		})
 		</script>
 	</body>
 
