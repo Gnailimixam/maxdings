@@ -48,12 +48,13 @@
       <article>
         <div id="output">
 
-        </div>	
+        </div>  
       </article>
-	    	    
-      	<a id="likebtn" style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin-top: 70px; margin-right: 50px;"  onclick="like();" href="#">Like!</a>
-	<a id="dislikebtn" style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin-top: 70px; margin-left: 50px;"  onclick="dislike();" href="#">Nope!</a>
-
+            
+        <a id="likebtn" style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin-top: 70px; margin-right: 50px;"  onclick="like();" href="#">Like!</a>
+        <a id="dislikebtn" style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin-top: 70px; margin-left: 50px;"  onclick="dislike();" href="#">Nope!</a><br>
+        <a style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin-top: 70px; margin-left: 50px; opacity:0.3;"  href="https://docs.google.com/spreadsheets/d/1U4NaVB0jAQXUE8FPjxTA2GccB8Ae19YnY-5G3YRmydM/edit#gid=0" target="_blank">Nope!</a>
+  
 
 
       <footer>
@@ -66,25 +67,25 @@
 
     <script>
          function like(){
-         	var sentence = document.getElementsByTagName("dd")[0].innerHTML;
-         	var time = new Date();
-         	console.log(document.getElementsByTagName("dd")[0].innerHTML);
-     		$.ajax({
-        		url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence,
-        		method: "GET",
-        		dataType: "json"
-      		}).success(function(){
-	     		console.log("Done");
-     		});
-		setTimeout(function(){
-		    location.reload();	
-		}, 250);
-   	 }
-	   
-   	 function dislike(){
-	     location.reload();	   
+          var sentence = document.getElementsByTagName("dd")[0].innerHTML;
+          var time = new Date();
+          console.log(document.getElementsByTagName("dd")[0].innerHTML);
+        $.ajax({
+            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence,
+            method: "GET",
+            dataType: "json"
+          }).success(function(){
+          console.log("Done");
+        });
+    setTimeout(function(){
+        location.reload();  
+    }, 250);
+     }
+     
+     function dislike(){
+       location.reload();    
          }
-  </script>  	  
+  </script>     
   </body>
 
 </html>
