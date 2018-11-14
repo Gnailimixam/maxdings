@@ -69,7 +69,8 @@
     <script>
          function react(reaction){
           var sentence = document.getElementsByTagName("dd")[0].innerHTML;
-          var time = new Date();
+          var timer = new Date();
+          var time = timer.toLocaleDateString() + " | " + timer.toLocaleTimeString(
           console.log(document.getElementsByTagName("dd")[0].innerHTML);
         $.ajax({
             url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence + '&reaction=' + reaction,
