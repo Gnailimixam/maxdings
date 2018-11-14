@@ -91,7 +91,7 @@
     			url: "https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec",
     			method: "GET",
     			dataType: "json",
-    			data: $form.serializeObject()
+    			data: $('form#test-form').serializeObject()
   			}).success(
 				//something
   			);
