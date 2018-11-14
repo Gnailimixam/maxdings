@@ -61,15 +61,40 @@
 
 		</div>
 		
-<form sheetsu="https://sheetsu.com/apis/v1.0/805150cd742a">
-  <input type="text" name="time">
-  <input type="text" name="sentence">
-  <textarea name="message"></textarea>
+		
+		var $form = $('form#test-form'),
+   		url = 'https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec'
 
-  <input type="submit" value="like">
+		<form id="test-form">
+  
+  <div>
+    <label>Field 1</label>
+    <input type="text" name="time" placeholder="time"/>
+  </div>
+
+  <div>
+    <label>Field 2</label>
+    <input type="text" name="sentence" placeholder="sentence"/>
+  </div>
+
+  <div>
+    <button type="submit"id="submit-form">Submit</button>
+  </div>
+
 </form>
-
-<script src="//load.sheetsu.com"></script>
+		<script>
+		$('#submit-form').on('click', function(e) {
+  			e.preventDefault();
+  			var jqxhr = $.ajax({
+    			url: url,
+    			method: "GET",
+    			dataType: "json",
+    			data: $form.serializeObject()
+  			}).success(
+    			 console.log("sent");
+  			);
+		})
+		</script>
 	</body>
 
 </html>
