@@ -63,27 +63,32 @@
 
     </div>
     
-   <script>
-         function like(){
-         var sentence = document.getElementsByTagName("dd")[0].innerHTML;
-   var time = new Date();
-         console.log(document.getElementsByTagName("dd")[0].innerHTML);
-     $.ajax({
-        url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence,
-        method: "GET",
-        dataType: "json"
-      }).success(function(){
-	     console.log("Done");
-     }
-           //test
-      );
-   }
-	   
-   function dislike(){
-	location.reload();	   
-   }
 
+    <script>
+         function like(){
+         	var sentence = document.getElementsByTagName("dd")[0].innerHTML;
+         	var time = new Date();
+         	console.log(document.getElementsByTagName("dd")[0].innerHTML);
+     		$.ajax({
+        		url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence,
+        		method: "GET",
+        		dataType: "json"
+      		}).success(function(){
+	     		console.log("Done");
+			setTimeout(function(){
+			    location.reload();	
+			}, 250);
+     		});
+   	 }
+	   
+   	 function dislike(){
+	     location.reload();	   
+         }
    </script>
+	  
+	  
+	  
+	  
   </body>
 
 </html>
