@@ -51,8 +51,8 @@
         </div>	
       </article>
 	    
-      	<a onclick="sendData();" id="generateLike" href="#" title="Like!"></a>
-	<a id="generate" href="#" title="Nope!"></a>
+      	<a onclick="like();" href="#">Like!</a>
+	<a onclick="dislike();" href="#">Nope!</a>
 
 
 
@@ -64,7 +64,7 @@
     </div>
     
    <script>
-         function sendData(){
+         function like(){
          var sentence = document.getElementsByTagName("dd")[0].innerHTML;
    var time = new Date();
          console.log(document.getElementsByTagName("dd")[0].innerHTML);
@@ -72,9 +72,15 @@
         url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence,
         method: "GET",
         dataType: "json"
-      }).success(
+      }).success(function(){
+	     console.log("Done");
+     }
            //test
-            );
+      );
+   }
+	   
+   function dislike(){
+	location.reload();	   
    }
 
    </script>
