@@ -80,7 +80,7 @@
   </div>
 
   <div>
-    <button type="submit"id="submit-form" value="like">Submit</button>
+    <button type="submit"id="submit-form" value="like1">Submit</button>
   </div>
 
 </form>
@@ -88,7 +88,7 @@
 		$('#submit-form').on('click', function(e) {
   			e.preventDefault();
   			var jqxhr = $.ajax({
-    			url: url,
+    			url: "https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec",
     			method: "GET",
     			dataType: "json",
     			data: $form.serializeObject()
