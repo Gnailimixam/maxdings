@@ -65,9 +65,9 @@
 
 
     <center><button style="margin: 50px"  onclick="sendData();" type="button" id="submit-form">Like!</button><button style="margin: 50px" onclick="sendData();" type="button" id="submit-form">Dislike!</button></center>
-	  
+	  <div id="like" onclick="sendData();">Like!</div> <div id="like" onclick="sendData();">Like!</div>
    <script>
-  function sendData(){
+         function sendData(){
          var sentence = document.getElementsByTagName("dd")[0].innerHTML;
    var time = new Date();
          console.log(document.getElementsByTagName("dd")[0].innerHTML);
