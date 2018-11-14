@@ -61,10 +61,7 @@
 
 		</div>
 		
-		<script>
-		var $form = $('form#test-form'),
-   		url = 'https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec'	
-		</script>
+
 
 
 		<form id="test-form">
@@ -80,23 +77,25 @@
   </div>
 
   <div>
-    <button onclick="saveSentence();" type="button" id="submit-form" value="like1">2</button>
+    <button onclick="saveSentence();" type="button" id="submit-form" value="like1">3</button>
   </div>
 
 </form>
 		<script>
-			function saveSentence(){
-				console.log("saving");
-  				var jqxhr = $.ajax({
-    				url: "https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec",
-    					method: "GET",
-    					dataType: "json",
-    					data: JSON.stringify({time: 123, sentence: 456})
-  				}).success(
-					//something
-  				);
-			}
-				
+var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
 		</script>
 	</body>
 
