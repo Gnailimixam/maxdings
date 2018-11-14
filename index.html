@@ -71,7 +71,7 @@
   </div>
 
   <div>
-    <button onclick=" sendData();" type="button" id="submit-form" value="like1">4</button>
+    <button onclick=" sendData();" type="button" id="submit-form" value="like1">5</button>
   </div>
 
 </form>
@@ -81,7 +81,7 @@
     		url: 'https://script.google.com/macros/s/AKfycbypQJTKqLQdoSSSP0mh9evtg6D4sMKka6wQ8xgfxcytnr-849H9/exec',
     		method: "GET",
     		dataType: "json",
-    		data: JSON.stringify({time: Date.now(), sentence: document.getElementById("sentence").value)
+    		data: JSON.stringify({time: Date.now(), sentence: document.getElementById("sentence").value})
   		}).success(
     		   console.log("Sending");
   	        );
