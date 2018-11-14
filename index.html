@@ -80,11 +80,16 @@
   </div>
 
   <div>
-    <button type="button" id="submit-form" value="like1">2</button>
+    <button onclick="saveSentence();" type="button" id="submit-form" value="like1">2</button>
   </div>
 
 </form>
 		<script>
+			function saveSentence(){
+				console.log("saving");
+				
+			}
+				
 		$('#submit-form').on('click', function(e) {
   			e.preventDefault();
   			var jqxhr = $.ajax({
