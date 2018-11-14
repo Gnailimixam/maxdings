@@ -50,9 +50,9 @@
 
         </div>	
       </article>
-	    
-      	<a id="likebtn"  onclick="like();" href="#">Like!</a>
-	<a id="dislikebtn"  onclick="dislike();" href="#">Nope!</a>
+	    	    
+      	<a id="likebtn" style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin: 50px;"  onclick="like();" href="#">Like!</a>
+	<a id="dislikebtn" style="text-decoration: none; font-size: 20px; color: #000; font-weight: 800; margin: 50px;"  onclick="dislike();" href="#">Nope!</a>
 
 
 
@@ -75,20 +75,16 @@
         		dataType: "json"
       		}).success(function(){
 	     		console.log("Done");
-			setTimeout(function(){
-			    location.reload();	
-			}, 250);
      		});
+		setTimeout(function(){
+		    location.reload();	
+		}, 250);
    	 }
 	   
    	 function dislike(){
 	     location.reload();	   
          }
-   </script>
-	  
-	  
-	  
-	  
+  </script>  	  
   </body>
 
 </html>
